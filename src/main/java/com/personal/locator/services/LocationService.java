@@ -49,7 +49,7 @@ public class LocationService {
 
     public List<Location> getLocations() {
         List<Location> locations = locationRepository.findAll();
-        locations.sort((o1, o2) -> o1.getCreatedDate().compareTo(o2.getCreatedDate()));
+        locations.sort((o2, o1) -> o1.getCreatedDate().compareTo(o2.getCreatedDate()));
         return locations;
     }
 }
